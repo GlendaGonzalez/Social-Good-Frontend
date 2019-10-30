@@ -27,14 +27,14 @@ import {
 const CustomMap = withScriptjs(
   withGoogleMap(props => (
     <GoogleMap
-      defaultZoom={13}
-      defaultCenter={{ lat: 40.748817, lng: -73.985428 }}
+      defaultZoom={10}
+      defaultCenter={{ lat: 25.579711, lng: -80.567601 }}
       defaultOptions={{
         scrollwheel: false,
         zoomControl: true
       }}
     >
-      <Marker position={{ lat: 40.748817, lng: -73.985428 }} />
+      <Marker position={{ lat: 25.579711, lng: -80.567601 }} />
     </GoogleMap>
   ))
 );
@@ -42,10 +42,10 @@ const CustomMap = withScriptjs(
 function Maps({ ...prop }) {
   return (
     <CustomMap
-      googleMapURL="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE"
-      loadingElement={<div style={{ height: `100%` }} />}
-      containerElement={<div style={{ height: `100vh` }} />}
-      mapElement={<div style={{ height: `100%` }} />}
+      googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcWBzl3X6tK3xHCBWkIceYQdUnHfmDWCY"
+      loadingElement={<div style={{ height: `90%` }} />}
+      containerElement={<div style={{ height: `90vh` }} />}
+      mapElement={<div style={{ height: `90%` }} />}
     />
   );
 }
