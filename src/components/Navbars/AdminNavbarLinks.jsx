@@ -20,52 +20,48 @@ import { NavItem, Nav, NavDropdown, MenuItem } from "react-bootstrap";
 
 class AdminNavbarLinks extends Component {
   render() {
-    const notification = (
-      <div>
-        <i className="fa fa-globe" />
-        <b className="caret" />
-        <span className="notification">5</span>
-        <p className="hidden-lg hidden-md">Notification</p>
-      </div>
-    );
+    
     return (
       <div>
         <Nav>
           <NavItem eventKey={1} href="#">
-            <i className="fa fa-dashboard" />
             <p className="hidden-lg hidden-md">Dashboard</p>
           </NavItem>
-
-          <NavItem eventKey={3} href="#">
-            <i className="fa fa-search" />
-            <p className="hidden-lg hidden-md">Search</p>
-          </NavItem>
         </Nav>
+        
         <Nav pullRight>
-          <NavItem eventKey={1} href="#">
-            Account
-          </NavItem>
+
           <NavDropdown
-            eventKey={2}
             title="Login"
             id="basic-nav-dropdown"
           >
-            <MenuItem eventKey={2.1}></MenuItem>
+          
             <input type="text"  class="form-control" placeholder="Username" required="required" ></input>
-
-            <MenuItem eventKey={2.2}></MenuItem>
             <input type="password" class="form-control" placeholder="Password" required="required"></input>
-
-            <MenuItem eventKey={2.3}></MenuItem>
             <input type="submit" class="btn btn-primary btn-block" value="Login" ></input>
+            <div class="form-footer">
+              <a href="#">Forgot Your password?</a>
+            </div>
+          </NavDropdown>
 
-            <MenuItem eventKey={2.4}>Forgot your password?</MenuItem>
+          <NavDropdown
+            title="Sign up"
+            id="basic-nav-dropdown"
+          >
+            <p class="hint-text"> Fill in this form to create your account!</p>
+            <div class = "form-group">
+              <input type="text"  class="form-control" placeholder="Username" required="required" ></input>
+            </div>
+            <div class = "form-group">
+              <input type="password" class="form-control" placeholder="Password" required="required"></input>
+            </div><div class = "form-group">
+              <input type="password" class="form-control" placeholder="Confirm Password" required="required"></input>
+            </div>
+        
+            <input type="submit" class="btn btn-primary btn-block" value="Sign up" ></input>
 
           </NavDropdown>
 
-          <NavItem eventKey={3} href="#">
-            Sign Up
-          </NavItem>
         </Nav>
       </div>
     );
