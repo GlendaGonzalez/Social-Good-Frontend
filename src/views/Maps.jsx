@@ -32,7 +32,7 @@ const CustomMap = withScriptjs(
       defaultOptions={{
         scrollwheel: false,
         zoomControl: true
-      }}
+      }}      
     >
       <Marker position={{ lat: 25.579711, lng: -80.567601 }} />
     </GoogleMap>
