@@ -268,7 +268,7 @@ var style = {
 //
 const thArray = ["ID", "Name", "Outreach methods", "Targeted Areas", "Targeted Audience"];
 const tdArray = [
-  ["1", "Dakota Rice", "$36,738", "Niger", "Oud-Turnhout"],
+  ["1", "Organization X", "Flyers", "Kendall", "Elderly"],
 ];
 
 //
