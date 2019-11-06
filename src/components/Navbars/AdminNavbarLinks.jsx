@@ -61,16 +61,15 @@ class AdminNavbarLinks extends Component {
           </NavItem>
           <NavDropdown
             eventKey={2}
-            title="Dropdown"
-            id="basic-nav-dropdown-right"
+            title="Login"
+            id="basic-nav-dropdown"
           >
-            <MenuItem eventKey={2.1}>Action</MenuItem>
-            <MenuItem eventKey={2.2}>Another action</MenuItem>
-            <MenuItem eventKey={2.3}>Something</MenuItem>
-            <MenuItem eventKey={2.4}>Another action</MenuItem>
-            <MenuItem eventKey={2.5}>Something</MenuItem>
-            <MenuItem divider />
-            <MenuItem eventKey={2.5}>Separated link</MenuItem>
+          <input type="text"  class="form-control" placeholder="Username" required="required" ></input>
+            <input type="password" class="form-control" placeholder="Password" required="required"></input>
+            <input type="submit" class="btn btn-primary btn-block" value="Login" ></input>
+            <div class="form-footer">
+            <a href="http://localhost:3000/admin/table">Forgot Your password?</a>
+            </div>
           </NavDropdown>
           <NavItem eventKey={3} href="#">
             Log out
