@@ -18,7 +18,6 @@
 import Dashboard from "views/Dashboard.jsx";
 import UserProfile from "views/UserProfile.jsx";
 import TableList from "views/TableList.jsx";
-import Typography from "views/Typography.jsx";
 import Icons from "views/Icons.jsx";
 import Maps from "views/Maps.jsx";
 
@@ -27,7 +26,7 @@ const dashboardRoutes = [
   {
     path: "/dashboard",
     name: "Dashboard",
-    icon: "pe-7s-graph",
+    icon: "pe-7s-home",
     component: Dashboard,
     layout: "/admin"
   },
@@ -40,16 +39,9 @@ const dashboardRoutes = [
   },
   {
     path: "/table",
-    name: "Table List",
+    name: "Organization List",
     icon: "pe-7s-note2",
     component: TableList,
-    layout: "/admin"
-  },
-  {
-    path: "/typography",
-    name: "Typography",
-    icon: "pe-7s-news-paper",
-    component: Typography,
     layout: "/admin"
   },
   {
@@ -61,12 +53,14 @@ const dashboardRoutes = [
   },
   {
     path: "/maps",
-    name: "Maps",
+    name: "County Map",
     icon: "pe-7s-map-marker",
     component: Maps,
     layout: "/admin"
   },
-
+  {path: "/forgotpassword",
+   component: TableList
+  }
 ];
 
 export default dashboardRoutes;
