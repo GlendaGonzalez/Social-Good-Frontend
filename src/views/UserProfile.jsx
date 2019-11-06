@@ -44,47 +44,36 @@ class UserProfile extends Component {
                 content={
                   <form>
                     <FormInputs
-                      ncols={["col-md-5", "col-md-3", "col-md-4"]}
+                      ncols={["col-md-5", "col-md-5"]}
                       properties={[
                         {
-                          label: "Company (disabled)",
+                          label: "Organization Name",
                           type: "text",
                           bsClass: "form-control",
-                          placeholder: "Company",
-                          defaultValue: "Creative Code Inc.",
-                          disabled: true
+                          placeholder: "Organization X",                          
                         },
                         {
                           label: "Username",
                           type: "text",
                           bsClass: "form-control",
-                          placeholder: "Username",
-                          defaultValue: "michael23"
-                        },
-                        {
-                          label: "Email address",
-                          type: "email",
-                          bsClass: "form-control",
-                          placeholder: "Email"
+                          placeholder: "Username123",                    
                         }
                       ]}
                     />
                     <FormInputs
-                      ncols={["col-md-6", "col-md-6"]}
+                      ncols={["col-md-5", "col-md-5"]}
                       properties={[
                         {
-                          label: "First name",
-                          type: "text",
+                          label: "Email address",
+                          type: "email",
                           bsClass: "form-control",
-                          placeholder: "First name",
-                          defaultValue: "First name"
+                          placeholder: "johndoe123@email.com"
                         },
                         {
-                          label: "Last name",
+                          label: "Telephone Number",
                           type: "text",
                           bsClass: "form-control",
-                          placeholder: "Last name",
-                          defaultValue: "Last name"
+                          placeholder: "123-456-7890",                          
                         }
                       ]}
                     />
@@ -92,12 +81,10 @@ class UserProfile extends Component {
                       ncols={["col-md-12"]}
                       properties={[
                         {
-                          label: "Address",
+                          label: "Organization Address",
                           type: "text",
                           bsClass: "form-control",
-                          placeholder: "Home Address",
-                          defaultValue:
-                            "Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09"
+                          placeholder: "Street Address",                          
                         }
                       ]}
                     />
@@ -109,34 +96,56 @@ class UserProfile extends Component {
                           type: "text",
                           bsClass: "form-control",
                           placeholder: "City",
-                          defaultValue: "Mike"
                         },
                         {
                           label: "Country",
                           type: "text",
                           bsClass: "form-control",
                           placeholder: "Country",
-                          defaultValue: "Andrew"
                         },
                         {
-                          label: "Postal Code",
+                          label: "Zip Code",
                           type: "number",
                           bsClass: "form-control",
-                          placeholder: "ZIP Code"
+                          placeholder: "ZIP Code",
                         }
                       ]}
+                    />
+
+                    <FormInputs
+                    ncols={["col-md-4", "col-md-4", "col-md-4"]}
+                    properties={[
+                      {
+                        label: "Outreach Methods",
+                        type: "text",
+                        bsClass: "form-control",
+                        placeholder: "Billboards, Flyers",
+                      },
+                      {
+                        label: "Targeted Audience",
+                        type: "text",
+                        bsClass: "form-control",
+                        placeholder: "Young Adults, Hispanic",
+                      },
+                      {
+                        label: "Targeted Area(s)",
+                        type: "text",
+                        bsClass: "form-control",
+                        placeholder: "Wynwood, Little Havana",
+                      }
+                    ]}
+
                     />
 
                     <Row>
                       <Col md={12}>
                         <FormGroup controlId="formControlsTextarea">
-                          <ControlLabel>About Me</ControlLabel>
+                          <ControlLabel>About Us</ControlLabel>
                           <FormControl
                             rows="5"
                             componentClass="textarea"
                             bsClass="form-control"
-                            placeholder="Here can be your description"
-                            defaultValue="Insert Text"
+                            placeholder="Here can be the description of your organization"
                           />
                         </FormGroup>
                       </Col>
@@ -153,16 +162,10 @@ class UserProfile extends Component {
               <UserCard
                 bgImage="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400"
                 avatar={avatar}
-                name="First Last"
-                userName="insertusername"
+                name="Organization Name"
+                userName="Username"
                 description={
-                  <span>
-                    "text
-                    <br />
-                    text
-                    <br />
-                   text"
-                  </span>
+                  <span>Organization Bio</span>
                 }
                 socials={
                   <div>
