@@ -137,6 +137,31 @@ class UserProfile extends Component {
 
                     />
 
+                    <FormInputs
+                    ncols={["col-md-4", "col-md-4", "col-md-4"]}
+                    properties={[
+                      {
+                        label: "Facebook Page URL",
+                        type: "text",
+                        bsClass: "form-control",
+                        placeholder: "https://www.facebook.com/floridainternational/"
+                      },
+                      {
+                        label: "Instagram Page URL",
+                        type: "text",
+                        bsClass: "form-control",
+                        placeholder: "https://www.instagram.com/fiuinstagram/?hl=en"
+                      },
+                      {
+                        label: "Website URL",
+                        type: "text",
+                        bsClass: "form-control",
+                        placeholder: "https://miamicensus.org/"
+                      }
+                    ]}
+
+                    />
+
                     <Row>
                       <Col md={12}>
                         <FormGroup controlId="formControlsTextarea">
@@ -170,13 +195,14 @@ class UserProfile extends Component {
                 socials={
                   <div>
                     <Button simple>
-                      <i className="fa fa-facebook-square" />
+                      <i className="fa fa-facebook-square" 
+                      onClick= "facebook.com"/>
                     </Button>
                     <Button simple>
-                      <i className="fa fa-twitter" />
+                      <i className="fa fa-instagram" />
                     </Button>
                     <Button simple>
-                      <i className="fa fa-google-plus-square" />
+                      <i className="fa fa-globe" />
                     </Button>
                   </div>
                 }
