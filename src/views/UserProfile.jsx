@@ -196,7 +196,7 @@ class UserProfile extends Component {
                   <div>
                     <Button simple>
                       <i className="fa fa-facebook-square" 
-                      onClick= "facebook.com"/>
+                      href= "https://www.facebook.com/"/>
                     </Button>
                     <Button simple>
                       <i className="fa fa-instagram" />
