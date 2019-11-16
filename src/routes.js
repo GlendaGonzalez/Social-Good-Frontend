@@ -20,15 +20,15 @@ import UserProfile from "views/UserProfile.jsx";
 import TableList from "views/TableList.jsx";
 import Icons from "views/Icons.jsx";
 import Maps from "views/Maps.jsx";
+import About from "views/About.jsx";
 
 
 const dashboardRoutes = [
-  {
-    path: "/dashboard",
-    name: "Dashboard",
-    icon: "pe-7s-home",
-    component: Dashboard,
-    layout: "/admin"
+  {path:"/about",
+  name:"About",
+  icon:"pe-7s-info",
+  component:About,
+  layout: "/admin"
   },
   {
     path: "/user",
@@ -42,13 +42,6 @@ const dashboardRoutes = [
     name: "Organization List",
     icon: "pe-7s-note2",
     component: TableList,
-    layout: "/admin"
-  },
-  {
-    path: "/icons",
-    name: "Icons",
-    icon: "pe-7s-science",
-    component: Icons,
     layout: "/admin"
   },
   {
