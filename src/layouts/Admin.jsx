@@ -23,7 +23,6 @@ import AdminNavbar from "components/Navbars/AdminNavbar";
 import Footer from "components/Footer/Footer";
 import Sidebar from "components/Sidebar/Sidebar";
 
-
 import { style } from "variables/Variables.jsx";
 
 import routes from "routes.js";
@@ -36,8 +35,8 @@ class Admin extends Component {
     this.state = {
       _notificationSystem: null,
       image: image,
-      color: "black",
-      hasImage: true,
+      hasImage: true,//hasImage: true
+      color: "black",//color: "black"
       fixedClasses: "dropdown show-dropdown open"
     };
   }

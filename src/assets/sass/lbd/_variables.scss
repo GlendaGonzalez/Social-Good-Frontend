@@ -17,7 +17,7 @@ $black-color:                #333333 !default;
 $black-hr:                   #444444 !default;
 
 $light-gray:                 #E3E3E3 !default;
-$medium-gray:                #DDDDDD !default;
+$medium-gray:                #DDDDDD !default;// Text
 $medium-dark-gray:           #AAAAAA !default;
 $dark-gray:                  #9A9A9A !default;
 
@@ -243,10 +243,11 @@ $filter-red:          darken($danger-color, 10%);
 $new-blue:            #1DC7EA;
 $new-purple:          #9368E9;
 $new-red:             #FB404B;
-$new-green:           #87CB16;
+$new-green:           rgb(37, 168, 33);
 $new-orange:          #FFA534;
 $new-dark-blue:       #1b8dff;
 $new-black:           #5e5e5e;
+$new-Ra:           #5eFF5e;
 
 
 $topbar-x:             topbar-x !default;
@@ -255,7 +256,7 @@ $bottombar-x:          bottombar-x !default;
 $bottombar-back:       bottombar-back !default;
 
 
-$white-navbar:              rgba(#FFFFFF, .96);
+$white-navbar:              rgba(#FFFFFF, .96);//NavBar Color
 $blue-navbar:               lighten($new-dark-blue, 10%);
 $azure-navbar:              lighten($new-blue, 15%);
 $green-navbar:              lighten($new-green, 10%);

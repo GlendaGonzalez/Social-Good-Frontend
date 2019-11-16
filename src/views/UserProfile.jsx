@@ -170,7 +170,7 @@ class UserProfile extends Component {
                 socials={
                   <div>
                     <Button simple>
-                      <i className="fa fa-facebook-square" />
+                      <i className="fa fa-facebook-square social-facebook" href="https://www.facebook.com/" />
                     </Button>
                     <Button simple>
                       <i className="fa fa-twitter" />

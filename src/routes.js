@@ -21,15 +21,15 @@ import TableList from "views/TableList.jsx";
 import Typography from "views/Typography.jsx";
 import Icons from "views/Icons.jsx";
 import Maps from "views/Maps.jsx";
-
-
+import Forgotpassword from "views/Forgotpassword.jsx";
+import About from "views/About.jsx";
 const dashboardRoutes = [
-  {
-    path: "/dashboard",
-    name: "Dashboard",
-    icon: "pe-7s-graph",
-    component: Dashboard,
-    layout: "/admin"
+  {path:"/about",
+  name:"About",
+  icon:"pe-7s-info",
+  component:About,
+  layout: "/admin"
+
   },
   {
     path: "/user",
@@ -45,28 +45,22 @@ const dashboardRoutes = [
     component: TableList,
     layout: "/admin"
   },
-  {
-    path: "/typography",
-    name: "Typography",
-    icon: "pe-7s-news-paper",
-    component: Typography,
-    layout: "/admin"
-  },
-  {
-    path: "/icons",
-    name: "Icons",
-    icon: "pe-7s-science",
-    component: Icons,
-    layout: "/admin"
-  },
+ 
   {
     path: "/maps",
-    name: "Maps",
+    name: "Census Outreach Map",
     icon: "pe-7s-map-marker",
     component: Maps,
     layout: "/admin"
   },
-
+  {
+    path:"/forgot",
+    name:"",
+    icon: "",
+    component: Forgotpassword,
+    layout: "/admin"
+  },
+  
 ];
 
 export default dashboardRoutes;

@@ -97,7 +97,7 @@
 
         li{
             > a{
-                color: #FFFFFF;
+                color: #0f93ae;//left icons
                 margin: 5px 15px;
                 opacity: .86;
                 border-radius: 4px;
@@ -125,6 +125,7 @@
             font-size: 12px;
             font-weight: 600;
             text-transform: uppercase;
+            color: #FFFFFF;//left text
         }
 
         .caret{
@@ -236,7 +237,7 @@ body > .navbar-collapse{
 
 
 .main-panel{
-    background: rgba(203,203,210,.15);
+    background:#FFFFFF ;
     position: relative;
     float: right;
     width: $sidebar-width;

@@ -36,11 +36,11 @@ class AdminNavbarLinks extends Component {
             id="basic-nav-dropdown"
           >
           
-            <input type="text"  class="form-control" placeholder="Username" required="required" ></input>
+          <input type="text"  class="form-control" placeholder="Username" required="required" ></input>
             <input type="password" class="form-control" placeholder="Password" required="required"></input>
             <input type="submit" class="btn btn-primary btn-block" value="Login" ></input>
             <div class="form-footer">
-              <a href="#">Forgot Your password?</a>
+            <a href="./forgot">Forgot Your password?</a>
             </div>
           </NavDropdown>
 
@@ -48,7 +48,7 @@ class AdminNavbarLinks extends Component {
             title="Sign up"
             id="basic-nav-dropdown"
           >
-            <p class="hint-text"> Fill in this form to create your account!</p>
+            <p class="hint-text"> Fill in this form to create your account</p>
             <div class = "form-group">
               <input type="text"  class="form-control" placeholder="Username" required="required" ></input>
             </div>
@@ -58,7 +58,7 @@ class AdminNavbarLinks extends Component {
               <input type="password" class="form-control" placeholder="Confirm Password" required="required"></input>
             </div>
         
-            <input type="submit" class="btn btn-primary btn-block" value="Sign up" ></input>
+            <input type="submit" class="btn-xs btn-primary btn-block" value="Sign up" ></input>
 
           </NavDropdown>
 

@@ -739,6 +739,8 @@ body > .navbar-collapse[data-color="purple"]:after {
 .btn-xs {
   font-size: 12px;
   border-radius: 3px;
+  background-color: #F00FFF;
+    color: "red";
   padding: 1px 5px; }
   .btn-xs.btn-round {
     padding: 2px 5px; }
