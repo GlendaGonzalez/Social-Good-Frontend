@@ -193,7 +193,7 @@ class UserProfile extends Component {
                 socials={
                   <div>
                     <Button simple>
-                      <i className="fa fa-facebook-square social-facebook" href="https://www.facebook.com/" />
+                      <i className="fa fa-facebook-square social-facebook" href="https://www.facebook.co/" />
                     </Button>
                     <Button simple>
                       <i className="fa fa-twitter" />
