@@ -136,6 +136,29 @@ class UserProfile extends Component {
                     ]}
 
                     />
+                    <FormInputs
+                    ncols={["col-md-4", "col-md-4", "col-md-4"]}
+                    properties={[
+                      {
+                        label: "Facebook Page URL",
+                        type: "text",
+                        bsClass: "form-control",
+                        placeholder: "https://www.facebook.com/floridainternational/"
+                      },
+                      {
+                        label: "Instagram Page URL",
+                        type: "text",
+                        bsClass: "form-control",
+                        placeholder: "https://www.instagram.com/fiuinstagram/?hl=en"
+                      },
+                      {
+                        label: "Website URL",
+                        type: "text",
+                        bsClass: "form-control",
+                        placeholder: "https://miamicensus.org/"
+                      }
+                    ]}
+                    />
 
                     <Row>
                       <Col md={12}>
