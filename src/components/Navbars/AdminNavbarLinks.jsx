@@ -16,7 +16,9 @@
 
 */
 import React, { Component } from "react";
-import { NavItem, Nav, NavDropdown, MenuItem } from "react-bootstrap";
+import { NavItem, Nav, NavDropdown, MenuItem, Button, } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import UserProfile from "views/UserProfile";
 
 class AdminNavbarLinks extends Component {
   render() {
@@ -51,6 +53,9 @@ class AdminNavbarLinks extends Component {
             <i className="fa fa-search" />
             <p className="hidden-lg hidden-md">Search</p>
           </NavItem>
+
+          <Button color="primary" data-toggle="collapse" href="#theJumbotron" role="button" aria-expanded="false" aria-controls="theJumbotron">Toggle</Button>
+
         </Nav>
         <Nav pullRight>
           <NavItem eventKey={1} href="#">
