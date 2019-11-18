@@ -69,7 +69,7 @@ class AdminNavbarLinks extends Component {
           <input type="text"  class="form-control" placeholder="Username" required="required" ></input>
             <input type="password" class="form-control" placeholder="Password" required="required"></input>
             <input type="submit" class="btn btn-primary btn-block" value="Login" ></input>
-            <div class="form-footer">
+            <div class="text-center">
             <a href="./table">Forgot Your password?</a>
             </div>
           </NavDropdown>
