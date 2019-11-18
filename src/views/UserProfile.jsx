@@ -27,6 +27,7 @@ import {
 
 import { Card } from "components/Card/Card.jsx";
 import { FormInputs } from "components/FormInputs/FormInputs.jsx";
+import { Form } from "components/Form/Form.jsx";
 import { UserCard } from "components/UserCard/UserCard.jsx";
 import Button from "components/CustomButton/CustomButton.jsx";
 
@@ -111,31 +112,21 @@ class UserProfile extends Component {
                         }
                       ]}
                     />
-
-                    <FormInputs
-                    ncols={["col-md-4", "col-md-4", "col-md-4"]}
-                    properties={[
-                      {
-                        label: "Outreach Methods",
-                        type: "text",
-                        bsClass: "form-control",
-                        placeholder: "Billboards, Flyers",
-                      },
-                      {
-                        label: "Targeted Audience",
-                        type: "text",
-                        bsClass: "form-control",
-                        placeholder: "Young Adults, Hispanic",
-                      },
-                      {
-                        label: "Targeted Area(s)",
-                        type: "text",
-                        bsClass: "form-control",
-                        placeholder: "Wynwood, Little Havana",
-                      }
-                    ]}
-
-                    />
+                    <Form>
+                    {['checkbox', 'radio'].map(type => (
+                      <div key={`inline-${type}`} className="mb-3">
+                      <Form.Check inline label="Electronic Methods" type={type} id={`inline-${type}-1`} />
+                      <Form.Check inline label="Door to Door" type={type} id={`inline-${type}-2`} />
+                      <Form.Check inline label="Phone" type={type} id={`inline-${type}-3`} />
+                      <Form.Check inline label="Computer Access" type={type} id={`inline-${type}-4`} />
+                      <Form.Check inline label="Radio Notices" type={type} id={`inline-${type}-5`} />
+                      <Form.Check inline label="Printed Communications" type={type} id={`inline-${type}-6`} />
+                      <Form.Check inline label="Events" type={type} id={`inline-${type}-7`} />
+                      <Form.Check inline label="Other" type={type} id={`inline-${type}-8`} />
+                      </div>
+                      ))}
+                      </Form>             
+                    
 
                     <FormInputs
                     ncols={["col-md-4", "col-md-4", "col-md-4"]}
@@ -196,7 +187,7 @@ class UserProfile extends Component {
                   <div>
                     <Button simple>
                       <i className="fa fa-facebook-square" 
-                      href= "https://www.facebook.com/"/>
+                      onClick= "window.location.href= https://www.facebook.com/"/>
                     </Button>
                     <Button simple>
                       <i className="fa fa-instagram" />
