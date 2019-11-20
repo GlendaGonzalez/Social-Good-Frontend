@@ -266,9 +266,9 @@ var style = {
 // // // For tables
 // //
 //
-const thArray = ["ID", "Name", "Outreach methods", "Targeted Areas", "Targeted Audience"];
+const thArray = ["Name", "Outreach methods", "Targeted Areas", "Targeted Audience", "Facebook", "Instagram", "Website"];
 const tdArray = [
-  ["1", "Organization X", "Flyers", "Kendall", "Elderly"],
+                ["Organization X", "Flyers", "Kendall", "Elderly", "https://www.facebook.com/floridainternational/", "https://www.instagram.com/fiuinstagram/?hl=en", "https://miamicensus.org/"],
 ];
 
 //
