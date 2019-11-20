@@ -27,15 +27,103 @@ import {
 
 import { Card } from "components/Card/Card.jsx";
 import { FormInputs } from "components/FormInputs/FormInputs.jsx";
-import { Form } from "components/Form/Form.jsx";
+import  Checkbox  from "components/Checkbox/Checkbox.jsx";
 import { UserCard } from "components/UserCard/UserCard.jsx";
 import Button from "components/CustomButton/CustomButton.jsx";
 
 import avatar from "assets/img/faces/face-0.jpg";
 
+const AUDIENCE = ["College Students", "Farm Workers", "Immigrants",
+                 "Non-English Speakers", "Homeless", "Children Under 5",
+                 "Elderly", "Other"];
+
+const METHODS = ["Electronic Communications", "Door to Door Canvas", "Phone Canvasing",
+                 "Computer Access", "Radio Notices", "Printed Communication", "Events", "Other"]
+
 class UserProfile extends Component {
+
+  state = {
+    checkboxes: AUDIENCE.reduce(
+      (options, option) => ({
+        ...options,
+        [option]: false
+      }),
+      {}
+    )
+  };
+
+  state2 = {
+    checkboxes: METHODS.reduce(
+      (options, option) => ({
+        ...options,
+        [option]: false
+      }),
+      {}
+    )
+  };
+
+  selectAllCheckboxes = isSelected => {
+    Object.keys(this.state.checkboxes).forEach(checkbox => {
+      // BONUS: Can you explain why we pass updater function to setState instead of an object?
+      this.setState(prevState => ({
+        checkboxes: {
+          ...prevState.checkboxes,
+          [checkbox]: isSelected
+        }
+      }));
+    });
+  };
+
+  selectAll = () => this.selectAllCheckboxes(true);
+
+  deselectAll = () => this.selectAllCheckboxes(false);
+
+  handleCheckboxChange = changeEvent => {
+    const { name } = changeEvent.target;
+
+    this.setState(prevState => ({
+      checkboxes: {
+        ...prevState.checkboxes,
+        [name]: !prevState.checkboxes[name]
+      }
+    }));
+  };
+
+  handleFormSubmit = formSubmitEvent => {
+    formSubmitEvent.preventDefault();
+
+    Object.keys(this.state.checkboxes)
+      .filter(checkbox => this.state.checkboxes[checkbox])
+      .forEach(checkbox => {
+        console.log(checkbox, "is selected.");
+      });
+  };
+
+  createCheckbox = option => (
+    <Checkbox
+      label={option}
+      isSelected={this.state.checkboxes[option]}
+      onCheckboxChange={this.handleCheckboxChange}
+      key={option}
+    />
+  );
+
+  createCheckbox2 = option => (
+    <Checkbox
+      label={option}
+      isSelected={this.state2.checkboxes[option]}
+      onCheckboxChange={this.handleCheckboxChange}
+      key={option}
+    />
+  );
+
+  createCheckboxes = () => AUDIENCE.map(this.createCheckbox);
+
+  createCheckboxes2 = () => METHODS.map(this.createCheckbox);
+
   render() {
     return (
+
       <div className="content">
         <Grid fluid>
           <Row>
@@ -111,21 +199,7 @@ class UserProfile extends Component {
                           placeholder: "ZIP Code",
                         }
                       ]}
-                    />
-                    <Form>
-                    {['checkbox', 'radio'].map(type => (
-                      <div key={`inline-${type}`} className="mb-3">
-                      <Form.Check inline label="Electronic Methods" type={type} id={`inline-${type}-1`} />
-                      <Form.Check inline label="Door to Door" type={type} id={`inline-${type}-2`} />
-                      <Form.Check inline label="Phone" type={type} id={`inline-${type}-3`} />
-                      <Form.Check inline label="Computer Access" type={type} id={`inline-${type}-4`} />
-                      <Form.Check inline label="Radio Notices" type={type} id={`inline-${type}-5`} />
-                      <Form.Check inline label="Printed Communications" type={type} id={`inline-${type}-6`} />
-                      <Form.Check inline label="Events" type={type} id={`inline-${type}-7`} />
-                      <Form.Check inline label="Other" type={type} id={`inline-${type}-8`} />
-                      </div>
-                      ))}
-                      </Form>             
+                    />         
                     
 
                     <FormInputs
@@ -152,6 +226,66 @@ class UserProfile extends Component {
                     ]}
 
                     />
+
+                    <Row> 
+                      <Col md={6}>
+
+                      <form onSubmit={this.handleFormSubmit}>
+                      <label>
+                        Targeted Audience
+                      </label>
+                      {this.createCheckboxes()}
+
+                        <div className="form-group mt-2">
+                          <button
+                          type="button"
+                          className="btn btn-outline-primary mr-2"
+                          onClick={this.selectAll}
+                          >
+                          Select All
+                          </button>
+                          <button
+                          type="button"
+                          className="btn btn-outline-primary mr-2"
+                          onClick={this.deselectAll}
+                          >
+                          Deselect All
+                          </button>
+                      </div>
+                    </form>
+
+                    </Col>
+
+                    <Col md={4}>
+
+                    <form onSubmit={this.handleFormSubmit}>
+                      <label>
+                        Outreach Methods
+                      </label>
+                      {this.createCheckboxes2()}
+
+                        <div className="form-group mt-2">
+                          <button
+                          type="button"
+                          className="btn btn-outline-primary mr-2"
+                          onClick={this.selectAll}
+                          >
+                          Select All
+                          </button>
+                          <button
+                          type="button"
+                          className="btn btn-outline-primary mr-2"
+                          onClick={this.deselectAll}
+                          >
+                          Deselect All
+                          </button>
+                      </div>
+                    </form>
+
+                      </Col>
+                    </Row>
+
+                    
 
                     <Row>
                       <Col md={12}>
@@ -201,9 +335,13 @@ class UserProfile extends Component {
             </Col>
           </Row>
         </Grid>
-      </div>
+      </div>      
+
     );
   }
+
+
+
 }
 
 export default UserProfile;
