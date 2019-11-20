@@ -38,7 +38,7 @@ const AUDIENCE = ["College Students", "Farm Workers", "Immigrants",
                  "Elderly", "Other"];
 
 const METHODS = ["Electronic Communications", "Door to Door Canvas", "Phone Canvasing",
-                 "Computer Access", "Radio Notices", "Printed Communication", "Events", "Other"]
+                 "Computer Access", "Radio Notices", "Printed Communication", "Events", "Other Methods"]
 
 class UserProfile extends Component {
 
