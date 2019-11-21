@@ -267,9 +267,6 @@ var style = {
 // //
 //
 const thArray = ["Name", "Outreach methods", "Targeted Areas", "Targeted Audience", "Facebook", "Instagram", "Website"];
-const tdArray = [
-                ["Organization X", "Flyers", "Kendall", "Elderly", "https://www.facebook.com/floridainternational/", "https://www.instagram.com/fiuinstagram/?hl=en", "https://miamicensus.org/"],
-];
 
 //
 // //
@@ -596,7 +593,6 @@ var legendBar = {
 module.exports = {
   style, // For notifications (App container and Notifications view)
   thArray,
-  tdArray, // For tables (TableList view)
   iconsArray, // For icons (Icons view)
   dataPie,
   legendPie,

@@ -19,9 +19,25 @@ import React, { Component } from "react";
 import { Grid, Row, Col, Table } from "react-bootstrap";
 
 import Card from "components/Card/Card.jsx";
-import { thArray, tdArray } from "variables/Variables.jsx";
+import { thArray } from "variables/Variables.jsx";
+import OrganizationsService from '../services/organizationsService';
 
 class TableList extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      orgs: []
+    }
+  }
+
+  async componentDidMount(){
+    try {
+      let orgs = await OrganizationsService.getOrganizations()
+      this.setState({orgs: orgs.data[0]})
+    }
+    catch(e) {
+    }
+  }
   render() {
     return (
       <div className="content">
@@ -43,11 +59,11 @@ class TableList extends Component {
                       </tr>
                     </thead>
                     <tbody>
-                      {tdArray.map((prop, key) => {
+                      {this.state.orgs.map((org) => {
                         return (
-                          <tr key={key}>
-                            {prop.map((prop, key) => {
-                              return <td key={key}>{prop}</td>;
+                          <tr key={org.OrgID}>
+                            {Object.values(org).map((orgDetail, key) => {
+                              return <td key={key}>{orgDetail}</td>;
                             })}
                           </tr>
                         );
