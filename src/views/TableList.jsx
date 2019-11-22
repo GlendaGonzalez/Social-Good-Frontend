@@ -33,7 +33,9 @@ class TableList extends Component {
   async componentDidMount(){
     try {
       let orgs = await OrganizationsService.getOrganizations()
-      this.setState({orgs: orgs.data[0]})
+      this.setState({orgs: orgs.data[0]}, () => {
+        console.log(this.state.orgs);
+      })
     }
     catch(e) {
     }
