@@ -22,38 +22,31 @@ import { Grid, Row, Col } from "react-bootstrap";
 import { Card } from "components/Card/Card.jsx";
 import { StatsCard } from "components/StatsCard/StatsCard.jsx";
 import { Tasks } from "components/Tasks/Tasks.jsx";
-// import {
-//   dataPie,
-//   legendPie,
-//   dataSales,
-//   optionsSales,
-//   responsiveSales,
-//   legendSales,
-//   dataBar,
-//   optionsBar,
-//   responsiveBar,
-//   legendBar
-// } from "variables/Variables.jsx";
+
 
 class About extends Component {
-  createLegend(json) {
-    var legend = [];
-    for (var i = 0; i < json["names"].length; i++) {
-      var type = "fa fa-circle text-" + json["types"][i];
-      legend.push(<i className={type} key={i} />);
-      legend.push(" ");
-      legend.push(json["names"][i]);
-    }
-    return legend;
-  }
+  // createLegend(json) {
+  //   var legend = [];
+  //   for (var i = 0; i < json["names"].length; i++) {
+  //     var type = "fa fa-circle text-" + json["types"][i];
+  //     legend.push(<i className={type} key={i} />);
+  //     legend.push(" ");
+  //     legend.push(json["names"][i]);
+  //   }
+  //   return legend;
+  // }
   render() {
     return (
       <div className="content">
         <Grid fluid>
-          <Row>
-            <Col lg={3} sm={6}></Col>
-             
-          </Row>
+        <div class="jumbotron jumbotron-fluid" >
+  <div class="container">
+    <h1 class="display-4">Purpose of the Outreach Map</h1>
+    <p class="lead">In support of the Miami-Dade Counts 2020 collaborative campaign, this website has been created to provide local organizations and nonprofits with information on the progress of outreach efforts across Miami-Dade and for specific hard to count communities.
+    </p>
+      <footer class="blockquote-footer">Social Good Team, <cite title="Source Title">SparkDev 2019</cite></footer>
+  </div>
+</div>
         </Grid>
       </div>
     );
