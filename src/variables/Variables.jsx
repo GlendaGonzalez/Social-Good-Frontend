@@ -266,7 +266,7 @@ var style = {
 // // // For tables
 // //
 //
-const thArray = ["Name", "Outreach methods", "Targeted Areas", "Targeted Audience", "Facebook", "Instagram", "Website"];
+const thArray = ["ID", "Name", "Purpose", "Website", "Email", "Facebook", "Instagram"];
 
 //
 // //

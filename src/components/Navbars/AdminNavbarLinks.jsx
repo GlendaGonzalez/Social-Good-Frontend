@@ -54,7 +54,7 @@ class AdminNavbarLinks extends Component {
             <p className="hidden-lg hidden-md">Search</p>
           </NavItem>
 
-          <Button color="primary" data-toggle="collapse" href="#theJumbotron" role="button" aria-expanded="false" aria-controls="theJumbotron">Toggle</Button>
+          
 
         </Nav>
         <Nav pullRight>
